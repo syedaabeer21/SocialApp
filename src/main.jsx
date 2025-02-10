@@ -6,6 +6,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Layout'
 import Home from './pages/Home'
 import Login from './pages/Login'
+import Friends from './pages/Friends.jsx'
+import { ToastContainer } from 'react-toastify';
 
 
 const router=createBrowserRouter([
@@ -20,6 +22,10 @@ const router=createBrowserRouter([
     {
       path:'login',
       element:<Login/>
+    },
+    {
+      path:'friends',
+      element:<Friends/>
     },
     ]
   }
