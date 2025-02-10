@@ -48,8 +48,17 @@ function Friends() {
   const handleAcceptRequest = async (requestId, senderId, senderName) => {
     console.log('Request ID:', requestId);
     console.log('Sender ID:', senderId);
+    console.log(senderName)
 
     if (!user) return;
+    if (!senderName) {
+      console.error("sender name is missing");
+      return;
+    }
+    if (!user.name) {
+      console.error("user name is missing");
+      return;
+    }
 
     try {
       const requestRef = doc(db, "friend_requests", requestId);
